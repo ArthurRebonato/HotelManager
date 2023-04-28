@@ -14,9 +14,9 @@ Projeto em Flutter que utiliza o web service mockapi.io com Retrofit para as inf
 https://6446d42bee791e1e290a1276.mockapi.io/api/hotels
 
 ## Apk HotelManager
-App x86_64 -> http://sendanywhe.re/2C440FYH
-App arm64-v8 -> http://sendanywhe.re/E4O4R7R0
-App armeabi-v7 -> http://sendanywhe.re/UXX8YUMR
+App x86_64 -> http://sendanywhe.re/2C440FYH<br>
+App arm64-v8 -> http://sendanywhe.re/E4O4R7R0<br>
+App armeabi-v7 -> http://sendanywhe.re/UXX8YUMR<br>
 
 ## Getting Started
 
