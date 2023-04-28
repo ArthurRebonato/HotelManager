@@ -68,21 +68,19 @@ class _MapPageState extends State<MapPage> {
         });
   }
 
-  void _onMapCreated(GoogleMapController controller){
+  void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
   }
 
-  pfHotelMarkerFunction(int i){
+  pfHotelMarkerFunction(int i) {
     int idHotelMock = i + 1;
     return Marker(
-      markerId: MarkerId(globals.nomesHotel[i]),
-      infoWindow: InfoWindow(title: globals.nomesHotel[i]),
-      icon: BitmapDescriptor.defaultMarker,
-      position: LatLng(double.parse(globals.lat[i]), double.parse(globals.lon[i])),
-      onTap: () => (
-          showDetails(idHotelMock.toString())
-      )
-    );
+        markerId: MarkerId(globals.nomesHotel[i]),
+        infoWindow: InfoWindow(title: globals.nomesHotel[i]),
+        icon: BitmapDescriptor.defaultMarker,
+        position:
+            LatLng(double.parse(globals.lat[i]), double.parse(globals.lon[i])),
+        onTap: () => (showDetails(idHotelMock.toString())));
   }
 
   @override
@@ -94,43 +92,40 @@ class _MapPageState extends State<MapPage> {
           title: const Text('Mapa'),
           centerTitle: true,
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => {
-              Navigator.pop(context)
-            }
-          ),
+              icon: const Icon(Icons.arrow_back),
+              onPressed: () => {Navigator.pop(context)}),
         ),
         body: GoogleMap(
-            mapType: MapType.normal,
-            markers: {
-              pfHotelMarkerFunction(0),
-              pfHotelMarkerFunction(1),
-              pfHotelMarkerFunction(2),
-              pfHotelMarkerFunction(3),
-              pfHotelMarkerFunction(4),
-              pfHotelMarkerFunction(5),
-              pfHotelMarkerFunction(6),
-              pfHotelMarkerFunction(7),
-              pfHotelMarkerFunction(8),
-              pfHotelMarkerFunction(9),
-              pfHotelMarkerFunction(10),
-              pfHotelMarkerFunction(11),
-              pfHotelMarkerFunction(12),
-              pfHotelMarkerFunction(13),
-              pfHotelMarkerFunction(14),
-              pfHotelMarkerFunction(15),
-              pfHotelMarkerFunction(16),
-              pfHotelMarkerFunction(17),
-              pfHotelMarkerFunction(18),
-              pfHotelMarkerFunction(19),
-            },
-            initialCameraPosition: CameraPosition(
-              target: _center,
-              zoom: 15.0,
-            ),
-            onMapCreated: _onMapCreated,
+          mapType: MapType.normal,
+          markers: {
+            pfHotelMarkerFunction(0),
+            pfHotelMarkerFunction(1),
+            pfHotelMarkerFunction(2),
+            pfHotelMarkerFunction(3),
+            pfHotelMarkerFunction(4),
+            pfHotelMarkerFunction(5),
+            pfHotelMarkerFunction(6),
+            pfHotelMarkerFunction(7),
+            pfHotelMarkerFunction(8),
+            pfHotelMarkerFunction(9),
+            pfHotelMarkerFunction(10),
+            pfHotelMarkerFunction(11),
+            pfHotelMarkerFunction(12),
+            pfHotelMarkerFunction(13),
+            pfHotelMarkerFunction(14),
+            pfHotelMarkerFunction(15),
+            pfHotelMarkerFunction(16),
+            pfHotelMarkerFunction(17),
+            pfHotelMarkerFunction(18),
+            pfHotelMarkerFunction(19),
+          },
+          initialCameraPosition: CameraPosition(
+            target: _center,
+            zoom: 15.0,
+          ),
+          onMapCreated: _onMapCreated,
         ),
-        ),
+      ),
     );
   }
 }
